@@ -14,15 +14,18 @@ See Alex Miller's post on [add-lib](http://insideclojure.org/2018/05/04/add-lib/
 
 For editor interop this project relies on [lein-tools-deps](https://github.com/RickMoynihan/lein-tools-deps)
 
-## Run the app and connect your REPL
+## Run the app 
 
 ```bash
 $ clj -m reptile-demo-app.core 9075
 ```
 
 This project will try to start a socket server on a port given on the command line or grab an unused port if none are 
-specified. The project will keep running until you kill it / press Ctrl-C
+specified. 
 
+The project will keep running until you kill it / press Ctrl-C
+
+## Connect REPL
 You can now connect up your REPL
 
 Here are some samples you can run to prove out the functions
@@ -34,7 +37,7 @@ Here are some samples you can run to prove out the functions
   :sha "10ee95eb2bed70af5bc29ea3bd78b380f054a8b4"})
 
 (use 'clojure.core.logic)
-(run* [q]  (== q true))
+(run* [q] (== q true))
 ```
 
 ```clojure 
@@ -45,7 +48,6 @@ Here are some samples you can run to prove out the functions
 (def encrypted (password/encrypt "foobar"))
 (password/check "foobar" encrypted) 
 ```
-
 
 ## GOTCHAs when adding libs
 

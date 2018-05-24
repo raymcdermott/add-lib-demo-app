@@ -25,7 +25,29 @@ specified. The project will keep running until you kill it / press Ctrl-C
 
 You can now connect up your REPL
 
-## Adding libs
+Here are some samples you can run to prove out the functions
+
+```clojure 
+(use 'clojure.tools.deps.alpha.repl)
+(add-lib 'org.clojure/core.logic
+ {:git/url "https://github.com/clojure/core.logic" 
+  :sha "10ee95eb2bed70af5bc29ea3bd78b380f054a8b4"})
+
+(use 'clojure.core.logic)
+(run* [q]  (== q true))
+```
+
+```clojure 
+(use 'clojure.tools.deps.alpha.repl)
+(add-lib 'crypto-password {:mvn/version "0.2.0"})
+
+(require '[crypto.password.bcrypt :as password])
+(def encrypted (password/encrypt "foobar"))
+(password/check "foobar" encrypted) 
+```
+
+
+## GOTCHAs when adding libs
 
 Please note that `tools.deps` only understands git SHAs for projects that have a valid Manifest - pom.xml or deps.edn
 

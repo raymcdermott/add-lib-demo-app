@@ -2,6 +2,7 @@
         org.clojure/tools.nrepl {:mvn/version "0.2.12"}
         clj-time                {:mvn/version "0.14.2"}
         org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"
-                                      :sha     "d492e97259c013ba401c5238842cd3445839d020"}}}
+                                      :sha     "d492e97259c013ba401c5238842cd3445839d020"}}
+ :aliases {:add-lib-demo {:main-opts ["-m" "reptile-demo-app.core"]}}}
 
 

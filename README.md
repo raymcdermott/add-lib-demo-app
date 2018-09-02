@@ -1,6 +1,6 @@
 # add-lib demo-app
 
-An app that can be contacted via a REPL and have a library added.
+An app that can be contacted via a REPL and have a library added at runtime.
 
 See Alex Miller's post on [add-lib](http://insideclojure.org/2018/05/04/add-lib/)
 
@@ -10,18 +10,14 @@ See Alex Miller's post on [add-lib](http://insideclojure.org/2018/05/04/add-lib/
 2. Have a dependency on org.clojure/tools.deps.alpha
 3. Be started with a clojure.lang.DynamicClassLoader
 
-## Optional
-
-For editor interop this project relies on [lein-tools-deps](https://github.com/RickMoynihan/lein-tools-deps)
-
 ## Run the app 
 
 ```bash
-$ clj -m reptile-demo-app.core 9075
+$ clojure -A:add-lib-demo
 ```
 
 This project will try to start a socket server on a port given on the command line or grab an unused port if none are 
-specified. 
+specified.
 
 The project will keep running until you kill it / press Ctrl-C
 
@@ -51,7 +47,7 @@ Here are some samples you can run to prove out the functions
 
 ## GOTCHAs when adding libs
 
-Please note that `tools.deps` only understands git SHAs for projects that have a valid Manifest - pom.xml or deps.edn
+The add-lib only supports git SHAs for projects that have a Manifest: either deps.edn or pom.xml
 
 You will see an error like `Manifest type not detected when finding deps for ...` when you attempt to add a 
 library where these conditions are not satisfied.

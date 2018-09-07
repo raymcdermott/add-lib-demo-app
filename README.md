@@ -1,6 +1,6 @@
-# add-lib demo-app
+# add-lib demo-app - PREPL based demo
 
-An app that can be contacted via a REPL and have a library added at runtime.
+An app that can be contacted via a PREPL and have a library added at runtime.
 
 See Alex Miller's post on [add-lib](http://insideclojure.org/2018/05/04/add-lib/)
 
@@ -8,12 +8,12 @@ See Alex Miller's post on [add-lib](http://insideclojure.org/2018/05/04/add-lib/
 
 1. Use deps.edn
 2. Have a dependency on org.clojure/tools.deps.alpha
-3. Be started with a clojure.lang.DynamicClassLoader
+3. Runs using a clojure.lang.DynamicClassLoader
 
 ## Run the app 
 
 ```bash
-$ clojure -A:add-lib-demo
+$ clojure -A:add-lib-demo 9075
 ```
 
 This project will try to start a socket server on a port given on the command line or grab an unused port if none are 
@@ -21,8 +21,8 @@ specified.
 
 The project will keep running until you kill it / press Ctrl-C
 
-## Connect REPL
-You can now connect up your REPL
+## Connect PREPL
+You can now connect up your PREPL
 
 Here are some samples you can run to prove out the functions
 

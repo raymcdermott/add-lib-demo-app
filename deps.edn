@@ -1,4 +1,4 @@
-{:deps {org.clojure/clojure     {:mvn/version "1.10.0-alpha4"}
+{:deps {org.clojure/clojure     {:mvn/version "1.10.0-alpha7"}
         org.clojure/tools.nrepl {:mvn/version "0.2.12"}
         clj-time                {:mvn/version "0.14.2"}
         org.clojure/tools.deps.alpha {:git/url "https://github.com/clojure/tools.deps.alpha.git"

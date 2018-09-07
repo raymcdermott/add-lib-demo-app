@@ -2,6 +2,8 @@
   (:require [clojure.test :refer :all]
             [reptile-demo-app.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest meaningless-test
+  (testing "Is time a string - can we prove that theory?"
+    (is (= (string? (time-now "Heisenberg"))))))
+
+
